@@ -1,35 +1,72 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Buttontest from "./Buttontest";
 import { Switch } from "react-router-dom";
 import { Route } from "react-router-dom";
-import Button2 from "./Button2";
-import Button1 from "./Button1";
-import Button3 from "./Button3";
 import Materialuipage from "./Materialuipage";
-
+import Button from "./Selectionwidget";
+import { Link } from "react-router-dom";
+import Seclectionwidget from "./Selectionwidget";
 function App() {
+  const ButtonList = [
+    {
+      config: 1,
+      description: "red",
+    },
+    {
+      config: 2,
+      description: "Green",
+    },
+    {
+      config: 3,
+      description: "Blue",
+    },
+  ];
   return (
-    <div className="App">
+    <>
       <Switch>
-        <Route exact path="/">
-          <Buttontest />
-        </Route>
-        <Route exact path="/page1">
-          <Button1 />
-        </Route>
-        <Route exact path="/page2">
-          <Button2 />
-        </Route>
-        <Route exact path="/page3">
-          <Button3 />
-        </Route>
-        <Route exact path="/material">
+        <Route exact path="/materil">
           <Materialuipage />
         </Route>
       </Switch>
-      {/* <Buttontest /> */}
-      {/* <header className="App-header">
+      <div className="App" style={{ display: "inline-flex", width: "100%" }}>
+        {ButtonList.map((e) => {
+          return (
+            <Seclectionwidget config={e.config} description={e.description} />
+          );
+        })}
+      </div>
+      <Link to="/materil">
+        <button>click to ui page</button>
+      </Link>
+    </>
+  );
+}
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <Switch>
+//         <Route exact path="/aa">
+//           <Buttontest />
+//         </Route>
+//         <Route exact path="/page1">
+//           <Button1 />
+//         </Route>
+//         <Route exact path="/">
+//           <Button2 />
+//         </Route>
+//         <Route exact path="/page3">
+//           <Button3 />
+//         </Route>
+//         <Route exact path="/material">
+//           <Materialuipage />
+//         </Route>
+//       </Switch>
+{
+  /* <Buttontest /> */
+}
+{
+  /* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -42,9 +79,10 @@ function App() {
         >
           Learn React
         </a>
-      </header> */}
-    </div>
-  );
+      </header> */
 }
+//     </div>
+//   );
+// }
 
 export default App;

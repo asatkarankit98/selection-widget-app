@@ -1,5 +1,5 @@
 import React from "react";
-import Buttontest from "./Buttontest";
+
 import {
   AppBar,
   Toolbar,
@@ -23,23 +23,12 @@ export default function Materialuipage() {
         <div
           className="main_box row"
           id="main_box"
-          style={{ display: "inline-flex", width: "100%" }}
+          //   style={{ display: "inline-flex", width: "100%" }}
         >
-          <div
-            className="col-4"
-            id="image"
-            style={{
-              width: "40%",
-              height: "500px",
-              padding: "10px",
-            }}
-          >
-            <img
-              src="download.png"
-              style={{ width: "100%", height: "100%" }}
-            ></img>
+          <div className="col-4" id="image">
+            <img src="download.png"></img>
           </div>
-          <div className="col-7" style={{ width: "60%" }}>
+          <div id="col7id" className="col-7">
             <h1>This is online Shoping </h1>
             <p>
               details the conditions by which a person may hold New Zealand
@@ -59,7 +48,16 @@ export default function Materialuipage() {
               status when living in the United Kingdom; they are eligible to
               vote in British elections and serve in public office there.
             </p>
-            <button>Click</button>
+            <button
+              style={{
+                backgroundColor: "black",
+                textAlign: "center",
+                color: "white",
+                width: "100px",
+              }}
+            >
+              Buy now
+            </button>
           </div>
         </div>
       </div>

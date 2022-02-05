@@ -1,0 +1,22 @@
+#navebtn {
+  width: 100%;
+  /* border: 2px solid black; */
+  display: inline-flex;
+  justify-content: space-between;
+}
+#navebtn .col-4 {
+  width: 32%;
+  /* border: 2px solid red; */
+}
+#navebtn .col-4 button {
+  width: 100%;
+}
+#nave {
+  text-align: center;
+}
+.MuiAppBar-colorPrimary {
+  align-items: center;
+  text-align: center;
+}
+@media (max-width: 766px) {
+}
